@@ -122,6 +122,13 @@ body {
     font-weight:  600;
 }
 
+.news-content > span:hover {
+    color: var(--primary-2);
+    font-size: 1.2rem;
+    font-weight:  600;
+    cursor: pointer;
+}
+
 .red_btn {
     background-color: var(--primary-2);
     width: 10rem;
@@ -130,8 +137,14 @@ body {
     color: white;
     letter-spacing: .2rem;
     font-weight: 700;
+    transition: background-color 0.3s ease;
+    
 }
 
+.red_btn:hover {
+    /* background-color: var(--neutral-4); */
+    animation: colorChange 2s infinite;
+}
 
 .more-info {
     display: flex;
@@ -183,4 +196,18 @@ body {
     font-size: .8rem;
 }
 
+@media (max-width: 767px) {
+    
+}
 
+@keyframes colorChange {
+    0% {
+      background-color: var(--primary-2);
+    }
+    50% {
+      background-color: var(--neutral-4);
+    }
+    100% {
+      background-color: var(--primary-2);
+    }
+  }
